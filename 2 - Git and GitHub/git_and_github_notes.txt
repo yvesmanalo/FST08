@@ -47,3 +47,7 @@ git add "filename.extension" - add specific files modified from working area to 
 
 git commit -m "description"
 
+to check the history of the changes.
+git log
+git log --oneline
+
