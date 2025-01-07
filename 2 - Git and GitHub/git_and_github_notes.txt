@@ -51,3 +51,14 @@ to check the history of the changes.
 git log
 git log --oneline
 
+Branching and Merging
+
+List all the available branches:
+git branch -a
+
+Create a new branch
+git branch [branch-name]
+
+Switch to a different branch
+git switch [branch-name]
+git checkout [branch-name] - legacy version
