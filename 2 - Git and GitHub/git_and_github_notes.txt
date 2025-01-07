@@ -1,0 +1,46 @@
+version control tool
+-keeping track of changes
+-undoing mistakes
+-collaborating with other developers
+
+Git
+- a version control tool
+
+repositories (repo's)
+-container for a project you want to track with Git
+-local (repository living inside local machine) or remote
+
+git bash
+terminal allows to use the same commands for both platforms (windows or Mac)
+
+command to check git version: git --version
+
+configure our git
+1. set username
+git config --global user.name "username"
+for checking: git config user.name
+
+2. set email
+git config --global user.email "email"
+for checking:  git config user.email
+
+to convert normal folder to a repository
+git init
+
+Legends:
+U - untracked, way of saying the files are intracked
+
+Git3 Stage Architecture
+1. Working Area
+2. Staging Area - preparation area
+3. Commit Stage - 
+
+commits
+-snapshots of the different stages of your project
+
+git status
+
+git add . - add all files modified from working area to staging area
+
+git commit -m "description"
+
