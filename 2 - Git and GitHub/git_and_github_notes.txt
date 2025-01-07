@@ -29,18 +29,21 @@ git init
 
 Legends:
 U - untracked, way of saying the files are intracked
+A - Added
+M - Modified 
 
 Git3 Stage Architecture
-1. Working Area
+1. Working Area - location of project on local machine
 2. Staging Area - preparation area
 3. Commit Stage - 
 
 commits
 -snapshots of the different stages of your project
 
-git status
+git status - check status of all files and folders within project folder
 
 git add . - add all files modified from working area to staging area
+git add "filename.extension" - add specific files modified from working area to staging area
 
 git commit -m "description"
 
