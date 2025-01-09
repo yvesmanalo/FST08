@@ -1,0 +1,53 @@
+/* Element Selector */
+/* All the span tag will be affected. */
+span{
+  color: #07A0C3;
+  background-color: #086788;
+}
+
+
+/* class - . */
+.intro-paragraphs{
+  color: #DDE392;
+  background-color: #AFBE8F;
+}
+
+/* id - # */
+#main-heading{
+  text-align: center;
+  color:#80A1C1;
+  background-color: #EEE3AB;
+
+}
+
+/* Universal selector */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grouping Selector */
+/* tag vs element */
+/* tag - building blocks */
+/* element - tag with content within it*/
+h1,h2,.about-content{
+  color:#2D7DD2;
+  background-color: #97CC04;
+}
+
+/* Descendants Selector */
+.article-container p{
+  color:#042A2B;
+  background-color: #5EB1BF;
+}
+
+/* Pseudo-classes */
+a:hover{
+  background-color:#84DCC6;
+  color: #FFFFFF;
+}
+
+a:active{
+  background-color: #ED217C;
+  color: #1B998B;
+}
+
