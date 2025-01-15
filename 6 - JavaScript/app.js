@@ -1,26 +1,38 @@
-// Functions
-// Reusable blocks of code that can be executed whenever need
+// Arrays
+let fruits = ["Apple", "Banana", "Cherry","Grapes"]
 
-// 1. Function Definition
-function greet(){
-  console.log("Hello, welcome to the world of functions!")
-  console.log("Let's go!!")
-}
+console.log("Fruits", fruits);
+console.log("First Fruit:", fruits[0])
+console.log("First Fruit:", fruits[fruits.length - 1])
+console.log("Fruits:", fruits.length)
 
-// Calling a function (invoking a function)
-greet()
-greet()
-greet()
+// . - Dot Notation: used to access the properties and methods.
+// properties - information/data about something (array).
+// methods - function that belongs to something (array).
 
-// 2. Function definition with parameters.
-// parameters - placeholders
-// arguments - values passed to the functions parameters.
+fruits[0] = "Avocado"
+console.log("Fruits:", fruits);
 
-function sum(num1, num2){
-  return num1 + num2
-}
+// Adding a new element
+// .push(): allow us to add an element/s at the end of the array.
+fruits.push("Dewberry", "Apple")
+console.log("Fruits:", fruits);
 
-console.log("Sum of 10 and 20:", sum(10,20))
-console.log("Sum of 30 and 50:", sum(30,50))
 
+// Deleting an element
+// .pop(): allow use to delete an element at the end of the array
+fruits.pop()
+console.log("Fruits:", fruits)
+
+// Searching element
+// .includes(): check if an element exists
+// Return: true or false
+
+console.log("Is Banana included?", fruits.includes("Banana"))
+
+// .forEach(): allow us to pass a function. and execute this function to each element of the array
+
+fruits.forEach(function (fruit){
+  console.log("Fruit:", fruit)
+})
 
