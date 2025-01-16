@@ -21,8 +21,7 @@ function addTodo(event){
   newTodo.classList.add("todo-item")
   newTodo.textContent = todoInput.value;
   todoDiv.appendChild(newTodo);
-  console.log(todoDiv)
-
+  
   // Create a trash button
   const completeButton = document.createElement("button");
   completeButton.classList.add("complete-btn")
@@ -42,12 +41,46 @@ function addTodo(event){
   
 }
 
-function deleteOrCompleteTodo(){
+function deleteOrCompleteTodo(event){
+  const targetBtn = event.target;
+  
+  if (targetBtn.classList.contains("trash-btn")) {
+    const todoDiv = targetBtn.parentElement;
+    todoDiv.classList.add("fall");
 
+    todoDiv.addEventListener("transitionend", function(){
+        todoDiv.remove();
+    })
+  }
+
+  if (targetBtn.classList.contains("complete-btn")) {
+    const todoDiv = targetBtn.parentElement;
+    todoDiv.classList.toggle("completed")
+
+  }
 
 }
 
-function filterTodos(){
-
+function filterTodos(event){
+  const filterValue = event.target.value;
+  const todos = todoList.childNodes;
+  todos.forEach(function (todo){
+    if (filterValue === "all"){
+      todo.style.display = "flex";
+      
+    } else if (filterValue === "completed"){
+      if (todo.classList.contains("completed")){
+        todo.style.display = "flex";
+      } else {
+        todo.style.display = "none";
+      }
+      
+    } else if (filterValue === "uncompleted")
+      if (!todo.classList.contains("completed")){
+        todo.style.display = "flex";
+      } else {
+        todo.style.display = "none";
+      }
+  })
 
 }
